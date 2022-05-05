@@ -28,3 +28,4 @@ cursor.over("#next-link-action", {
   scale: 3,
   background: "white",
 });
+

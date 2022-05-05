@@ -20,10 +20,11 @@
   <body>
     <div class="container-fluid">
       <!-- nav bar -->
-      <nav class="fixed-top d-flex flex-row-reverse pt-3">
-        <div class="col-7 px-5">
-          <div class="row">
-            <div class="col d-flex align-items-center">
+      <nav class="row fixed-top d-flex flex-lg-row-reverse pt-3">
+        <div class="col-lg-7 col-12 px-lg-5">
+          <div class="row d-flex flex-lg-row flex-row-reverse">
+            <!-- nav link -->
+            <div class="col d-lg-flex align-items-center d-none">
               <a
                 class="next-link btn text-uppercase fw-bold bg-black-hover"
                 data-bs-toggle="tooltip"
@@ -50,7 +51,8 @@
                 >Contact</a
               >
             </div>
-            <div class="col text-end">
+            <!-- logo img -->
+            <div class="col text-lg-end text-center">
               <a href="#">
                 <img
                   src="./img/TIME LOGO_IZ LOGO-01.svg"
@@ -62,58 +64,78 @@
           </div>
         </div>
       </nav>
+
       <div class="row h-100vh bg-custom-tile">
-        <div class="col bg-warning px-0">
+        <div class="col-lg-5 bg-warning px-0">
           <div class="user-portrait"></div>
         </div>
-        <div class="col-7">
-          <div class="p-5"></div>
-          <div class="p-5"></div>
-          <div class="container-fluid mt-5 ps-5">
-            <div class="fs-1 fw-bold my-3 text-uppercase d-inline-block" id="cur-dot-moti">
-              A positive mindset <br />
+        <div class="col-lg-7">
+          <div class="p-lg-5 p-0"></div>
+          <div class="p-lg-5 p-0"></div>
+          <div class="container-fluid mt-5 ps-lg-5">
+            <div
+              class="fs-1 fw-bold my-3 text-uppercase text-center text-sm-start d-inline-block"
+              id="cur-dot-moti"
+            >
+              A positive mindset <br class="d-none d-lg-block" />
               Brings positive things.
             </div>
-            <br/>
-            <a href="#" class="btn btn-dark d-inline-block btn-lg mt-4" id="next-link-action">SEE PROJECT</a>
+            <br />
+            <a
+              href="#"
+              class="btn btn-dark d-block d-lg-inline-block btn-lg mt-4"
+              id="next-link-action"
+              >ABOUTME</a
+            >
+            <a
+              href="#"
+              class="btn btn-dark d-block d-lg-none d-lg-inline-block btn-lg mt-4"
+              id="next-link-action"
+              >SEE PROJECT</a
+            >
+            <a
+              href="#"
+              class="btn btn-dark d-block d-lg-none d-lg-inline-block btn-lg mt-4"
+              id="next-link-action"
+              >CONTACT ME</a
+            >
           </div>
+          <nav class="row fixed-bottom  d-flex flex-row-reverse mt-3 mt-lg-0" id="social-link">
+            <div class="col-lg-7 col-12">
+              <div class="d-flex justify-content-center py-3">
+                <a
+                  class="text-decoration-none text-primary px-2"
+                  href="#"
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="top"
+                  title="FACEBOOK"
+                  data-bs-toggle="tooltip"
+                  ><i class="fa-brands fa-3x fa-facebook"></i
+                ></a>
+                <a
+                  class="text-decoration-none text-danger px-2"
+                  href="#"
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="top"
+                  title="PINTEREST"
+                  data-bs-toggle="tooltip"
+                  ><i class="fa-brands fa-3x fa-pinterest"></i
+                ></a>
+                <a
+                  class="text-decoration-none text-dark px-2"
+                  href="#"
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="top"
+                  title="GITHUB"
+                  data-bs-toggle="tooltip"
+                  ><i class="fa-brands fa-3x fa-github"></i
+                ></a>
+              </div>
+            </div>
+          </nav>
+          <div class="p-5 p-lg-0"></div>
         </div>
       </div>
-      <nav class="fixed-bottom d-flex flex-row-reverse">
-        <div class="col-7">
-          <div class="row">
-            <div class="col d-flex justify-content-center py-3">
-              <a
-                class="text-decoration-none text-primary px-2"
-                href="#"
-                data-bs-toggle="tooltip"
-                data-bs-placement="top"
-                title="FACEBOOK"
-                data-bs-toggle="tooltip"
-                ><i class="fa-brands fa-3x fa-facebook"></i
-              ></a>
-              <a
-                class="text-decoration-none text-danger px-2"
-                href="#"
-                data-bs-toggle="tooltip"
-                data-bs-placement="top"
-                title="PINTEREST"
-                data-bs-toggle="tooltip"
-                ><i class="fa-brands fa-3x fa-pinterest"></i
-              ></a>
-              <a
-                class="text-decoration-none text-dark px-2"
-                href="#"
-                data-bs-toggle="tooltip"
-                data-bs-placement="top"
-                title="GITHUB"
-                data-bs-toggle="tooltip"
-                ><i class="fa-brands fa-3x fa-github"></i
-              ></a>
-            </div>
-          </div>
-        </div>
-      </nav>
     </div>
 
     <script
