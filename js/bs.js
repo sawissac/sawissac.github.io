@@ -14,3 +14,4 @@ if(mql.matches){
   let classesArray = slink.classList;
   classesArray = classesArray.replace("fixed-bottom","removed");
 }
+

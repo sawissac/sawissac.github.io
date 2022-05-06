@@ -15,12 +15,16 @@
       rel="stylesheet"
       href="lib/fontawesome-free-6.1.1-web/css/all.min.css"
     />
+    <script src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>  
     <title>Document</title>
   </head>
-  <body>
-    <div class="container-fluid">
+  <body class="bg-custom-tile">
+    <div class="container-fluid transition-fade" id="swup">
       <!-- nav bar -->
-      <nav class="row fixed-top d-flex flex-lg-row-reverse pt-3">
+      <nav
+        class="row fixed-top d-flex flex-lg-row-reverse pt-lg-3 pt-0"
+        id="nav-bar"
+      >
         <div class="col-lg-7 col-12 px-lg-5">
           <div class="row d-flex flex-lg-row flex-row-reverse">
             <!-- nav link -->
@@ -53,7 +57,7 @@
             </div>
             <!-- logo img -->
             <div class="col text-lg-end text-center">
-              <a href="#">
+              <a href="#" class="">
                 <img
                   src="./img/TIME LOGO_IZ LOGO-01.svg"
                   alt="user logo"
@@ -65,9 +69,26 @@
         </div>
       </nav>
 
-      <div class="row h-100vh bg-custom-tile">
-        <div class="col-lg-5 bg-warning px-0">
+      <div class="row h-100vh">
+        <div class="col-lg-5 bg-warning px-0 position-relative">
           <div class="user-portrait"></div>
+          <div
+            class="d-lg-none d-flex justify-content-center align-items-center flex-column position-absolute bottom-0 w-100 py-5"
+          >
+            <img
+            class="ani-d-u"
+              src="./img/scroll_down_icon.svg"
+              width="80px"
+              height="80px"
+              alt="scroll down icon"
+            />
+            <button
+              class="btn btn-warning btn-lg d-inline-block mt-3 fw-bold text-uppercase"
+              id="scroll-d-btn"
+            >
+              Scroll Down
+            </button>
+          </div>
         </div>
         <div class="col-lg-7">
           <div class="p-lg-5 p-0"></div>
@@ -85,22 +106,25 @@
               href="#"
               class="btn btn-dark d-block d-lg-inline-block btn-lg mt-4"
               id="next-link-action"
-              >ABOUTME</a
+              >ABOUT ME</a
             >
             <a
               href="#"
               class="btn btn-dark d-block d-lg-none d-lg-inline-block btn-lg mt-4"
               id="next-link-action"
-              >SEE PROJECT</a
+              >PROJECT</a
             >
             <a
               href="#"
               class="btn btn-dark d-block d-lg-none d-lg-inline-block btn-lg mt-4"
               id="next-link-action"
-              >CONTACT ME</a
+              >CONTACT</a
             >
           </div>
-          <nav class="row fixed-bottom  d-flex flex-row-reverse mt-3 mt-lg-0" id="social-link">
+          <nav
+            class="row fixed-bottom d-flex flex-row-reverse mt-3 mt-lg-0"
+            id="social-link"
+          >
             <div class="col-lg-7 col-12">
               <div class="d-flex justify-content-center py-3">
                 <a
@@ -147,5 +171,7 @@
     <script src="js/bs.js"></script>
     <script src="./lib/curDot/window.curDot.min.js"></script>
     <script src="./js/cursor.js"></script>
+    <script type="module" src="./js/scroll.js"></script>
+    <script src="./js/swup_plugin.js"></script>
   </body>
 </html>
