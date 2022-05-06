@@ -1,6 +1,11 @@
 * {
   cursor: none;
 }
+body{
+  background-image: url("../img/background_tile.jpg");
+  background-position: center;
+  background-repeat: repeat;
+}
 
 .bg-white {
   background-color: #ffffff;
@@ -12,12 +17,6 @@
 }
 .h-100vh {
   height: 100vh;
-}
-
-.bg-custom-tile {
-  background-image: url("../img/background_tile.png");
-  background-position: center;
-  background-repeat: repeat;
 }
 
 .user-portrait {
@@ -36,8 +35,15 @@
   animation-iteration-count: infinite;
 }
 
+.wellcome-d-u {
+  transform: translateY(10px);
+  animation: MoveUpDown 1.5s linear infinite;
+  animation-iteration-count: infinite;
+}
+
 @keyframes MoveUpDown {
-  0%,100% {
+  0%,
+  100% {
     transform: translateY(10px);
   }
   50% {
@@ -45,12 +51,11 @@
   }
 }
 
-
-.transition-fade {
+.swup-transition-fade {
   transition: 0.4s;
   opacity: 1;
 }
 
-html.is-animating .transition-fade {
+html.is-animating .swup-transition-fade {
   opacity: 0;
 }
