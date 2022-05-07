@@ -49,14 +49,19 @@ function initBs() {
         delay: { show: 200, hide: 200 },
       });
     });
-    window.addEventListener("resize", () => {
+
+    function detectScreen() {
       let mql = window.matchMedia("(max-width: 992px)");
       let classesArray = slink.classList;
       if (mql.matches) {
         classesArray = classesArray.replace("fixed-bottom", "removed");
-      }else{
+      } else {
         classesArray = classesArray.replace("removed", "fixed-bottom");
       }
+    }
+    detectScreen();
+    window.addEventListener("resize", () => {
+      detectScreen();
     });
   }
 }
