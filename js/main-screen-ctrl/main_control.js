@@ -32,6 +32,11 @@ function initCur() {
     scale: 3,
     background: "red",
   });
+
+  cursor.over(".shrink-cur",{
+    scale:1,
+    background: "white",
+  })
 }
 // bootstrap lib
 // BootStrap tooltips and media query
@@ -69,9 +74,10 @@ function initBs() {
 
 function initScroll() {
   const navEl = document.getElementById("nav-bar");
+  const aboutNavEl = document.getElementById("aboutnav");
   const scrollDBtn = document.getElementById("scroll-d-btn");
 
-  if (navEl && scrollDBtn) {
+  if (navEl && scrollDBtn || aboutNavEl && scrollDBtn) {
     const sd = new ScrollDetect();
     let toggleUpDown = true;
     scrollDBtn.addEventListener("click", function (e) {
@@ -87,21 +93,66 @@ function initScroll() {
       }
     });
 
-    sd.onScroll((direction) => {
+    sd.onScroll(() => {
       let yPos = sd.getScrollPosY();
       let isPass = yPos > 36;
       if (isPass) {
         toggleUpDown = false;
         scrollDBtn.textContent = "scroll up";
-        navEl.classList.add("bg-white");
+        if(navEl) navEl.classList.add("bg-white");
       } else {
         toggleUpDown = true;
         scrollDBtn.textContent = "scroll down";
-        navEl.classList.replace("bg-white", "bg-none");
+        if(navEl) navEl.classList.replace("bg-white", "bg-none");
       }
     });
   }
 }
+// aboutme magicscroll
+
+const controller = new ScrollMagic.Controller();
+
+function initScrollController() {
+  const aboutme_nav_el = document.getElementById("aboutnav");
+
+  if (aboutme_nav_el) {
+    new ScrollMagic.Scene({ triggerElement: "#trigger1" })
+      // trigger animation by adding a css class
+      .setClassToggle("#scene1", "move-state")
+      .addTo(controller);
+    new ScrollMagic.Scene({ triggerElement: "#trigger2" })
+      // trigger animation by adding a css class
+      .setClassToggle("#scene2", "move-state")
+      .addTo(controller);
+    new ScrollMagic.Scene({ triggerElement: "#trigger3" })
+      // trigger animation by adding a css class
+      .setClassToggle("#scene3", "move-state")
+      .addTo(controller);
+    new ScrollMagic.Scene({ triggerElement: "#trigger4" })
+      // trigger animation by adding a css class
+      .setClassToggle("#scene4", "move-state")
+      .addTo(controller);
+  }
+}
+// clip board function
+
+function initClipboard(){
+  var copyText = document.getElementById("email-copy");
+
+  if(copyText){
+    copyText.addEventListener("click",function(){
+      navigator.clipboard.writeText("issacmm64@gmail.com");
+      copyText.textContent = "email copyed";
+    })
+
+    copyText.addEventListener("mouseleave",function(){
+      copyText.textContent = "Copy Email";
+    })
+     /* Copy the text inside the text field */
+  }
+
+}
+
 
 // swup lib
 
@@ -113,8 +164,12 @@ initCur();
 initWellcomeTimmer();
 initBs();
 initScroll();
+initScrollController();
+initClipboard();
 
 swup.on("contentReplaced", initScroll);
 swup.on("contentReplaced", initCur);
 swup.on("contentReplaced", initWellcomeTimmer);
 swup.on("contentReplaced", initBs);
+swup.on("contentReplaced", initScrollController);
+swup.on("contentReplaced", initClipboard);

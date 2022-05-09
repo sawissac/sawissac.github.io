@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="shortcut icon"
+      href="/img/TIME LOGO_IZ LOGO small-02.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="/lib/fontawesome-free-6.1.1-web/css/all.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <title>AboutMe</title>
+  </head>
+  <body>
+    <main id="swup" class="swup-transition-fade">
+      <!-- navbar -->
+      <div
+        class="container-fluid py-3 bg-white shadow-sm sticky-top d-flex flex-row align-items-center"
+        id="aboutnav"
+      >
+        <a href="/main/">
+          <div class="px-3 py-2 expand-white btn bg-black-hover">
+            <i class="fa-solid fa-angle-left"></i>
+          </div>
+        </a>
+        <div class="fw-bold text-uppercase px-2">about me</div>
+      </div>
+      <!-- aboutme section -->
+      <div class="container-fulid h-100vh position-relative">
+        <div class="aboutme-landscape shrink-cur"></div>
+        <div
+          class="d-flex justify-content-center align-items-center flex-column position-absolute bottom-0 w-100 py-5"
+        >
+          <img
+            class="ani-d-u"
+            src=" /img/scroll_down_icon.svg"
+            width="80px"
+            height="80px"
+            alt="scroll down icon"
+          />
+          <button
+            class="btn btn-warning btn-lg d-inline-block mt-3 fw-bold text-uppercase"
+            id="scroll-d-btn"
+          >
+            Scroll Down
+          </button>
+        </div>
+      </div>
+      <!-- aboutme title -->
+
+      <div class="container w-75 py-5 stay-state" id="scene1">
+        <div class="py-lg-5 py-1"></div>
+        <div class="py-lg-5 py-1"></div>
+        <div id="trigger1"></div>
+        <h1 class="text-uppercase fw-bold">about me</h1>
+        <p class="fs-3 expand-white text-small">
+          Hi there, my name is Saw Issac. I'm a Web dev. I built beautiful
+          websites, hand-crafted websites and I love to do it for you. I always
+          communicate with my clients and make websites based on what the
+          clients want. You can talk with me, send a message or email anytimes
+          and I will reply to you as soon as possible.
+        </p>
+        <a
+          class="btn btn-warning btn-lg mt-3 fw-bold text-uppercase bg-white-hover expand-white"
+          id="scroll-d-btn"
+          href="https://drive.google.com/file/d/1FDA0h2FizuE5SUyvcSIjVFZu1_jCT514/view?usp=sharing"
+          download
+        >
+          download CV
+      </a>
+        <div class="py-lg-5 py-1"></div>
+        <div class="py-lg-5 py-1"></div>
+      </div>
+      <div class="container-fluid bg-white">
+        <div class="row stay-state d-flex flex-lg-row flex-column" id="scene2">
+          <div class="col d-flex justify-content-center align-items-center">
+            <div class="service-bg rounded shadow-sm"></div>
+          </div>
+          <div class="col py-lg-5 expand-white vh-100">
+            <div class="py-lg-5"></div>
+            <h1 class="mt-5 fw-bold">Services For My Clients</h1>
+            <div id="trigger2"></div>
+            <p class="fs-3">
+              These are services I can offer to my clients.
+              <br />
+              .Client Communication
+              <br />
+              .Website Responsive
+              <br />
+              .Fresh Web Designs
+              <br />
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="container w-75 py-5">
+        <div class="py-5"></div>
+        <h1 class="text-uppercase fw-bold">THINGS I CAN DO</h1>
+        <p class="fs-3">I use a lot of software to build a website.</p>
+        <div class="py-5"></div>
+      </div>
+      <div id="trigger3"></div>
+      <div class="container-fluid bg-white">
+        <div class="row stay-state d-flex flex-lg-row flex-column" id="scene3">
+          <div class="col-lg-6 col-12 bg-info bg-gradient bg-success">
+            <div class="bhrs-bg rounded shadow-sm"></div>
+          </div>
+          <div
+            class="col-lg-6 col-12 py-5 d-flex text-small justify-content-center align-items-center px-5 fs-3 expand-white"
+          >
+            For the frontend development, I use Bootstrap, React, Sass, HTML,
+            Css and other frontend library.
+          </div>
+        </div>
+      </div>
+      <div id="trigger4"></div>
+      <div class="container-fluid bg-white">
+        <div class="row stay-state d-flex flex-lg-row flex-column-reverse" id="scene4">
+          <div
+            class="col-lg-6 text-small col-12 py-5 d-flex justify-content-center align-items-center px-5 fs-3 expand-white"
+          >
+            For the backend development, I use MySQL, MongoDB, Node js,
+            Javascript, Typescript, Jquery and other backend library.For the
+            frontend development, I use Bootstrap, React, Sass, HTML, Css and
+            other frontend library.
+          </div>
+          <div class="col-lg-6 col-12 bg-indigo">
+            <div class="njt-bg rounded shadow-sm"></div>
+          </div>
+        </div>
+      </div>
+      <div class="container w-75 py-5">
+        <div class="py-5"></div>
+        <div class="py-5"></div>
+        <h1 class="text-uppercase fw-bold">Let's Work Together!</h1>
+        <p class="fs-3">
+          Contact me from email. Thank you for viewing my portfolio website.
+        </p>
+        <button
+
+          class="btn btn-warning btn-lg d-inline-block mt-3 fw-bold text-uppercase expand-white"
+          id="email-copy"
+        >
+          COPY EMAIL
+        </button>
+        <div class="py-5"></div>
+        <div class="py-5"></div>
+      </div>
+    </main>
+    <script>
+        window.location.href = "/index.html";
+    </script>
+  </body>
+</html>
