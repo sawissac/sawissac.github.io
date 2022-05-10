@@ -33,41 +33,51 @@ function initCur() {
     background: "red",
   });
 
-  cursor.over(".shrink-cur",{
-    scale:1,
+  cursor.over(".shrink-cur", {
+    scale: 1,
     background: "white",
-  })
+  });
 }
 // bootstrap lib
 // BootStrap tooltips and media query
 
 function initBs() {
-  var tooltipTriggerList = [].slice.call(
+  const tooltipTriggerList = [].slice.call(
     document.querySelectorAll('[data-bs-toggle="tooltip"]')
   );
-  let slink = document.getElementById("social-link");
 
-  if (tooltipTriggerList && slink) {
+  const tooltipTriggerDisposeList = [].slice.call(
+    document.querySelectorAll('[data-popper-placement="bottom"]')
+  );
+
+  if(tooltipTriggerDisposeList){
+    tooltipTriggerDisposeList.map(function(tooltipTriggerEl){
+      document.body.removeChild(tooltipTriggerEl);
+    })
+  }
+  let slink = document.getElementById("social-link");
+  if (tooltipTriggerList) {
     tooltipTriggerList.map(function (tooltipTriggerEl) {
       return new bootstrap.Tooltip(tooltipTriggerEl, {
         animation: true,
         delay: { show: 200, hide: 200 },
       });
     });
-
-    function detectScreen() {
-      let mql = window.matchMedia("(max-width: 992px)");
-      let classesArray = slink.classList;
-      if (mql.matches) {
-        classesArray = classesArray.replace("fixed-bottom", "removed");
-      } else {
-        classesArray = classesArray.replace("removed", "fixed-bottom");
+    if (slink) {
+      function detectScreen() {
+        let mql = window.matchMedia("(max-width: 992px)");
+        let classesArray = slink.classList;
+        if (mql.matches) {
+          classesArray = classesArray.replace("fixed-bottom", "removed");
+        } else {
+          classesArray = classesArray.replace("removed", "fixed-bottom");
+        }
       }
-    }
-    detectScreen();
-    window.addEventListener("resize", () => {
       detectScreen();
-    });
+      window.addEventListener("resize", () => {
+        detectScreen();
+      });
+    }
   }
 }
 // scroll detect
@@ -77,9 +87,10 @@ function initScroll() {
   const aboutNavEl = document.getElementById("aboutnav");
   const scrollDBtn = document.getElementById("scroll-d-btn");
 
-  if (navEl && scrollDBtn || aboutNavEl && scrollDBtn) {
-    const sd = new ScrollDetect();
+  const sd = new ScrollDetect();
+  if ((navEl && scrollDBtn) || (aboutNavEl && scrollDBtn)) {
     let toggleUpDown = true;
+    sd.scrollTo("y", 0);
     scrollDBtn.addEventListener("click", function (e) {
       e.preventDefault();
       if (toggleUpDown) {
@@ -99,11 +110,11 @@ function initScroll() {
       if (isPass) {
         toggleUpDown = false;
         scrollDBtn.textContent = "scroll up";
-        if(navEl) navEl.classList.add("bg-white");
+        if (navEl) navEl.classList.add("bg-white");
       } else {
         toggleUpDown = true;
         scrollDBtn.textContent = "scroll down";
-        if(navEl) navEl.classList.replace("bg-white", "bg-none");
+        if (navEl) navEl.classList.replace("bg-white", "bg-none");
       }
     });
   }
@@ -136,23 +147,21 @@ function initScrollController() {
 }
 // clip board function
 
-function initClipboard(){
+function initClipboard() {
   var copyText = document.getElementById("email-copy");
 
-  if(copyText){
-    copyText.addEventListener("click",function(){
+  if (copyText) {
+    copyText.addEventListener("click", function () {
       navigator.clipboard.writeText("issacmm64@gmail.com");
       copyText.textContent = "email copyed";
-    })
+    });
 
-    copyText.addEventListener("mouseleave",function(){
+    copyText.addEventListener("mouseleave", function () {
       copyText.textContent = "Copy Email";
-    })
-     /* Copy the text inside the text field */
+    });
+    /* Copy the text inside the text field */
   }
-
 }
-
 
 // swup lib
 
