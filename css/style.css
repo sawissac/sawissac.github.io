@@ -102,4 +102,7 @@ html.is-animating .swup-transition-fade {
  .text-small{
    font-size: 1.2rem !important;
  }
+ .w-100-resp{
+   width: 100% !important;
+ }
 }
