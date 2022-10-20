@@ -1,0 +1,31 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+body{
+    position: relative;
+}
+.h-55{
+    height: 55px;
+}
+
+.bg-center{
+    background-position: center;
+    width: 50px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background: rgba(0, 0, 0, 0.251);
+}
+
+.pointer{
+    cursor: pointer;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
+
+.w-max{
+    width: max-content;
+}
