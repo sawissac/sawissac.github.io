@@ -5,19 +5,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <title>Redirecting....</title>
 </head>
 
 <body>
     <script>
+        const section = {
+            aboutSection: "aboutSection",
+            workSection: "workSection",
+        };
+
+        function isSectionExist() {
+            return localStorage.getItem("section");
+        }
+
+        if(isSectionExist()){
+            localStorage.setItem("section", section.aboutSection)
+        }
+        
         let url = window.location.protocol +
-        "//" +
-        window.location.hostname +
-        ":" +
-        window.location.port +
-        "/app/";
-        window.location.assign(url)
+            "//" +
+            window.location.hostname +
+            ":" +
+            window.location.port +
+            "/app/";
+        window.location.assign(url);
     </script>
 </body>
 

@@ -29,3 +29,10 @@ body{
 .w-max{
     width: max-content;
 }
+
+
+@media screen and (max-width: 500px) {
+    .YouTube-container,.work-container{
+        height: 210px !important;
+    }
+}
